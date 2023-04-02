@@ -4,10 +4,8 @@ from core.views import ClienteViewSet, FuncionarioViewSet
 from rest_framework import routers
 
 router = routers.DefaultRouter()
-router.register(r'clientes', ClienteViewSet)
-
-router = routers.DefaultRouter()
 router.register(r'funcionarios', FuncionarioViewSet)
+router.register(r'clientes', ClienteViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
